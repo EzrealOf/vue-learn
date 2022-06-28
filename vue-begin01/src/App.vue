@@ -40,6 +40,11 @@ export default {
     </p>
 
     <p v-bind:id ="id+1"> v-bind绑定</p>
+
+    <button v-on:click="changeColor">改变颜色</button>
+
+    <p :[attributeName] = 'id'> v-bind绑定</p>
+    <button @[mouseEvent] = "attributeName = 'class'"> v-bind绑定</button>
   </div>
 </template>
 
@@ -57,5 +62,8 @@ export default {
 }
 #d2 {
   color: green;
+}
+.d1{
+  color: blue;
 }
 </style>
